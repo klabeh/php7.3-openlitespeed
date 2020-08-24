@@ -21,6 +21,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Persistent runtime dependencies
 ARG DEPS="\
         curl \
+        wget \
         ca-certificates \
         runit \
         php7.3 \
@@ -57,7 +58,6 @@ ARG DEPS="\
         litespeed \
 "
 
-# PHP.earth Alpine repository for better developer experience
 ADD https://repos.php.earth/alpine/phpearth.rsa.pub /etc/apk/keys/phpearth.rsa.pub
 
 RUN set -x \
