@@ -68,6 +68,6 @@ RUN set -x \
 
 COPY tags/litespeed /
 
-EXPOSE 8088 7080
+EXPOSE 80 7080
 
 CMD ["/sbin/runit-wrapper"]
